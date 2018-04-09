@@ -1,0 +1,23 @@
+; =============
+; RES = !NUM
+; =============
+
+; segmento de datos
+BEGIN-DATA
+		R=?		; donde se guarda el resultado
+END-DATA
+
+; segmento de código
+BEGIN-CODE
+
+	COMPARAR 7,5
+	SALTAR-SI-MAI SI
+	SALTAR NO 
+	
+SI:	MOVER 1,[R]	
+	TERMINAR
+	
+NO: MOVER 0,[R]
+	TERMINAR	
+
+END-CODE

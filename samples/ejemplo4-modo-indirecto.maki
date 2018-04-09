@@ -1,0 +1,21 @@
+; ===================
+; C = DIR(RES)
+; [[C]] = 2 * ( [A] + [B] )
+; ===================
+
+; segmento de datos
+BEGIN-DATA
+		A=5		  
+		B=13
+		C=?
+		RES=?		; donde se guarda el resultado
+END-DATA
+
+; segmento de código
+BEGIN-CODE
+		MOVER RES,[C]
+		SUMAR [A],[B]
+		MULTIPLICAR AC,2
+		MOVER AC,[[C]]
+		TERMINAR			; se detiene la máquina
+END-CODE

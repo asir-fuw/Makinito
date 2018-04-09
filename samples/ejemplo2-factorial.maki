@@ -1,0 +1,21 @@
+; =============
+; RES = !NUM
+; =============
+
+; segmento de datos
+BEGIN-DATA
+		NUM=10		; número a calcular el factorial  
+		FACT=?		; donde se guarda el resultado
+END-DATA
+
+; segmento de código
+BEGIN-CODE
+		MOVER 1,[FACT]
+BUCLE:	MULTIPLICAR [FACT],[NUM]
+		MOVER AC,[FACT]
+		RESTAR [NUM],1
+		MOVER AC,[NUM]
+		COMPARAR [NUM],1
+		SALTAR-SI-MA BUCLE		
+		TERMINAR			; se detiene la máquina
+END-CODE

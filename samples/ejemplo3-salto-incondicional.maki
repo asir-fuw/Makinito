@@ -1,0 +1,19 @@
+; =============
+; RES = !NUM
+; =============
+
+; segmento de datos
+BEGIN-DATA
+		NUM1=5		  
+		NUM2=13		  
+		RES=?		; donde se guarda el resultado
+END-DATA
+
+; segmento de código
+BEGIN-CODE
+		MULTIPLICAR [NUM1],[NUM2]
+		MOVER AC,[RES]
+		SALTAR AQUI
+		MOVER 12345,[RES]
+AQUI:	TERMINAR			; se detiene la máquina
+END-CODE

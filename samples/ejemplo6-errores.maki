@@ -1,0 +1,26 @@
+; ==================
+; RES = NUM^POTENCIA
+; ==================
+
+; segmento de datos
+BEGIN-DATA
+		NUM = 10		; número a elevar
+		POTENCIA = 3	; potencia
+		CONTADOR = ?	; contador
+		RES = ?			; donde se guarda el resultado
+END-DATA
+
+; segmento de código
+BEGIN-CODE
+		MOVER [NUM],[9000]
+		MOVER [POTENCIA],[CONTADOR]
+BUCLE: 	RESTAR [CONTADOR], 1
+		MOVER AC,[CONTADOR]
+		
+		COMPARAR [CONTADOR],0
+		SALTAR-SI-IG FIN
+		MULTIPLICAR [RES] , [NUM]
+		MOVER AC,[RES]
+		SALTAR BUCLE
+FIN:	TERMINAR			; se detiene la máquina
+END-CODE
