@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  */
 public class Messages {
 	
-	private static final ResourceBundle BUNDLE = ResourceBundle.getBundle("fvarrui.makinito.i18n.messages");
+	private static final ResourceBundle BUNDLE = ResourceBundle.getBundle("i18n/messages");
 
 	public static String getString(String key) {
 		try {

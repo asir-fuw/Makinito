@@ -25,7 +25,7 @@ import fvarrui.makinito.software.Operand;
  */
 public class Decoder extends Component {
 	
-	private static final String INSTRUCTION_SET_FILE = "/fvarrui/makinito/hardware/microcode/microcode.xml";
+	private static final String INSTRUCTION_SET_FILE = "/microcode/microcode.xml";
 
 	private FlagRegister flagsRegister;						// registro de estado
 	private Register decoderInstructionRegister;			// registro de instrucción del decodificador

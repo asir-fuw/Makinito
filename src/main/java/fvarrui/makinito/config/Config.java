@@ -4,7 +4,7 @@ import java.util.ResourceBundle;
 
 public class Config {
 	
-	private static final ResourceBundle BUNDLE = ResourceBundle.getBundle("fvarrui.makinito.config.config");
+	private static final ResourceBundle BUNDLE = ResourceBundle.getBundle("config/config");
 
 	public static String getVersion() {
 		return BUNDLE.getString("makinito.version");

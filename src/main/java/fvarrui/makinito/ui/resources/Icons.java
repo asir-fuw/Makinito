@@ -16,7 +16,7 @@ public class Icons {
 	public static final ImageIcon RELOAD = loadIcon("reload-24.png");
 
 	public static ImageIcon loadIcon(String name) {
-		return new ImageIcon(Icons.class.getResource(name));
+		return new ImageIcon(Icons.class.getResource("/icons/" + name));
 	}
 	
 }
