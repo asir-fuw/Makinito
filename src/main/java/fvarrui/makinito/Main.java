@@ -2,6 +2,7 @@ package fvarrui.makinito;
 
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
 import fvarrui.makinito.i18n.Messages;
 import fvarrui.makinito.ui.MakinitoFrame;
@@ -12,6 +13,7 @@ public class Main {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 					new MakinitoFrame().setVisible(true);
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, 
