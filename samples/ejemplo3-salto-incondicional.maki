@@ -11,9 +11,9 @@ END-DATA
 
 ; segmento de código
 BEGIN-CODE
-		MULTIPLICAR [NUM1],[NUM2]
-		MOVER AC,[RES]
-		SALTAR AQUI
-		MOVER 12345,[RES]
-AQUI:	TERMINAR			; se detiene la máquina
+		MUL [NUM1],[NUM2]
+		MOV AC,[RES]
+		JMP AQUI
+		MOV 12345,[RES]
+AQUI:	TERM			; se detiene la máquina
 END-CODE

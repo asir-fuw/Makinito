@@ -13,9 +13,9 @@ END-DATA
 
 ; segmento de código
 BEGIN-CODE
-		MOVER RES,[C]
-		SUMAR [A],[B]
-		MULTIPLICAR AC,2
-		MOVER AC,[[C]]
-		TERMINAR			; se detiene la máquina
+		MOV RES,[C]
+		ADD [A],[B]
+		MUL AC,2
+		MOV AC,[[C]]
+		TERM			; se detiene la máquina
 END-CODE

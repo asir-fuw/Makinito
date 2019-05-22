@@ -10,12 +10,12 @@ END-DATA
 
 ; segmento de código
 BEGIN-CODE
-		MOVER 1,[FACT]
-BUCLE:	MULTIPLICAR [FACT],[NUM]
-		MOVER AC,[FACT]
-		RESTAR [NUM],1
-		MOVER AC,[NUM]
-		COMPARAR [NUM],1
-		SALTAR-SI-MA BUCLE		
-		TERMINAR			; se detiene la máquina
+		MOV 1,[FACT]
+BUCLE:	MUL [FACT],[NUM]
+		MOV AC,[FACT]
+		SUB [NUM],1
+		MOV AC,[NUM]
+		CMP [NUM],1
+		JGT BUCLE		
+		TERM			; se detiene la máquina
 END-CODE

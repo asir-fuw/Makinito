@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>fvarrui.makinito</groupId>
+	<artifactId>Makinito</artifactId>
+	<version>0.7.0</version>
+
+	<name>Makinito</name>
+	<description>Von Neumann architecture simulator</description>
+	
+	<properties>
+		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.source>8</maven.compiler.source>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- build native app and installer -->
+			<plugin>
+				<groupId>fvarrui.maven</groupId>
+				<artifactId>javapackager</artifactId>
+				<version>0.8.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>package</goal>
+						</goals>
+						<configuration>
+							<mainClass>fvarrui.makinito.Main</mainClass>
+							<bundleJre>true</bundleJre>
+							<generateInstaller>true</generateInstaller>
+							<additionalResources>
+								<param>samples</param>
+							</additionalResources>
+							<organizationName>fvarrui</organizationName>
+							<organizationUrl>https://github.com/fvarrui</organizationUrl>
+							<url>https://github.com/fvarrui/Makinito</url>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
