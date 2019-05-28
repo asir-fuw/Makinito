@@ -10,7 +10,7 @@
 
 	<name>Makinito</name>
 	<description>Von Neumann architecture simulator</description>
-	
+
 	<properties>
 		<maven.compiler.target>8</maven.compiler.target>
 		<maven.compiler.source>8</maven.compiler.source>
@@ -64,5 +64,15 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>javapackager-repo</id>
+			<url>https://github.com/fvarrui/JavaPackager/raw/master/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
 
 </project>
