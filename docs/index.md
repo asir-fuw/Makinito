@@ -2,6 +2,8 @@
 
 Makinito simula el comportamiento de una máquina con arquitectura Von Neumann. Su uso es únicamente con fines didácticos.
 
+[Descargas](https://github.com/fvarrui/Makinito/releases/latest)
+
 ## Simulador
 
 ![Interfaz del simulador](images/interfaz.png)
