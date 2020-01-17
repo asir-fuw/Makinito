@@ -185,7 +185,7 @@ El MD indica cómo recuperar el dato, y el significado del CDE dependerá del MD
 | JMP  | 6     | 0110    |
 | ...  | ...   | ...     |
 
- ### Codificación de los modos de direccionamiento
+### Codificación de los modos de direccionamiento
 
 | MD         | Valor | Binario |
 | ---------- | ----- | ------- |
