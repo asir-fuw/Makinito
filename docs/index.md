@@ -132,20 +132,20 @@ El siguiente programa de ejemplo calcula el factorial del número especificado e
 
 ; segmento de datos
 BEGIN-DATA
-		NUM=10		; número a calcular el factorial  
-		FACT=?		; donde se guarda el resultado
+        NUM=10        ; número a calcular el factorial  
+        FACT=?        ; donde se guarda el resultado
 END-DATA
 
 ; segmento de código
 BEGIN-CODE
-		MOV 1,[FACT]
-BUCLE:	MUL [FACT],[NUM]
-		MOV AC,[FACT]
-		SUB [NUM],1
-		MOV AC,[NUM]
-		CMP [NUM],1
-		JGT BUCLE		
-		TERM		; se detiene la máquina
+        MOV 1,[FACT]
+BUCLE:  MUL [FACT],[NUM]
+        MOV AC,[FACT]
+        SUB [NUM],1
+        MOV AC,[NUM]
+        CMP [NUM],1
+        JGT BUCLE		
+        TERM          ; se detiene la máquina
 END-CODE
 ```
 
