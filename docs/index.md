@@ -16,22 +16,22 @@ La arquitectura simulada por Makinito es la siguiente:
 
 Makinito cuenta con las siguientes instrucciones:
 
-|  CO  | Instrucción (mnemónico) | Descripción                                                  |
-| :--: | ----------------------- | ------------------------------------------------------------ |
-|  0   | `MOV x, y`              | Copia el valor de **y** en **x**                             |
-|  1   | `ADD [x[,y]]`           | Suma los valores **x** e **y** y guarda el resultado en **AC** |
-|  2   | `SUB [x[,y]]`           | Resta los valores **x** e **y** y guarda el resultado en **AC** |
-|  3   | `MUL [x[,y]]`           | Multiplica los valores **x** e **y** y guarda el resultado en **AC** |
-|  4   | `DIV [x[,y]]`           | Divide los valores **x** e **y** y guarda el resultado en **AC** |
-|  5   | `CMP [x[,y]]`           | Compara los valores **x** e **y** y modifica el registro de estados |
-|  6   | `JMP d`                 | Salta a la dirección de memoria **d**                        |
-|  7   | `JE d`                  | Salta a la dirección de memoria **d **si **x** es igual a **y** |
-|  8   | `JLE d`                 | Salta a la dirección de memoria **d **si **x** es menor o igual a **y** |
-|  9   | `JGE d`                 | Salta a la dirección de memoria **d **si **x** es mayor o igual a **y** |
-|  10  | `JLT d`                 | Salta a la dirección de memoria **d **si **x** es menor que **y** |
-|  11  | `JGT d`                 | Salta a la dirección de memoria **d **si **x** es mayor que **y** |
-|  12  | `JNE d`                 | Salta a la dirección de memoria **d **si **x** es distinto de **y** |
-|  13  | `TERM`                  | Detiene la máquina                                           |
+|  CO  | Instrucción   | Descripción                                                  |
+| :--: | ------------- | ------------------------------------------------------------ |
+|  0   | `MOV x, y`    | Copia el valor de **y** en **x**                             |
+|  1   | `ADD [x[,y]]` | Suma los valores **x** e **y** y guarda el resultado en **AC** |
+|  2   | `SUB [x[,y]]` | Resta los valores **x** e **y** y guarda el resultado en **AC** |
+|  3   | `MUL [x[,y]]` | Multiplica los valores **x** e **y** y guarda el resultado en **AC** |
+|  4   | `DIV [x[,y]]` | Divide los valores **x** e **y** y guarda el resultado en **AC** |
+|  5   | `CMP [x[,y]]` | Compara los valores **x** e **y** y modifica el registro de estados |
+|  6   | `JMP d`       | Salta a la dirección de memoria **d**                        |
+|  7   | `JE d`        | Salta a la dirección de memoria **d **si **x** es igual a **y** |
+|  8   | `JLE d`       | Salta a la dirección de memoria **d **si **x** es menor o igual a **y** |
+|  9   | `JGE d`       | Salta a la dirección de memoria **d **si **x** es mayor o igual a **y** |
+|  10  | `JLT d`       | Salta a la dirección de memoria **d **si **x** es menor que **y** |
+|  11  | `JGT d`       | Salta a la dirección de memoria **d **si **x** es mayor que **y** |
+|  12  | `JNE d`       | Salta a la dirección de memoria **d **si **x** es distinto de **y** |
+|  13  | `TERM`        | Detiene la máquina                                           |
 
 > CO = Código de Operación
 
