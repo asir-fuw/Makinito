@@ -1,12 +1,12 @@
 package fvarrui.makinito.hardware;
 
 /**
- * Fases por las que pasa el secuenciador de forma c韈lica:
- * - Carga (fetch)				: 	recupera una instrucci髇 de la memoria y la lleva a la unidad de control.
- * - Decodificaci髇 (decode)	: 	determina las se馻les de control a ejecutar para llevar a cabo la instrucci髇 cargada.
- * - Ejecuci髇 (execute)		:	activa las se馻les de control generadas en la fase anterior.
+ * Fases por las que pasa el secuenciador de forma c铆clica:
+ * - Carga (fetch)				: 	recupera una instrucci贸n de la memoria y la lleva a la unidad de control.
+ * - Decodificaci贸n (decode)	: 	determina las se帽ales de control a ejecutar para llevar a cabo la instrucci贸n cargada.
+ * - Ejecuci贸n (execute)		:	activa las se帽ales de control generadas en la fase anterior.
  *  
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public enum Phase {
 	FETCH,

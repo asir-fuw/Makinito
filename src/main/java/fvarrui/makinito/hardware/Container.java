@@ -7,7 +7,7 @@ import java.util.List;
  * Componente capaz de contener otros componentes. Las unidades funcionales, como la unidad 
  * de control (Control Unit) son de tipo Container. 
  *  
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public abstract class Container extends Component {
 	private List<Component> components = new ArrayList<Component>();

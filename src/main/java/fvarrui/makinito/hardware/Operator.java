@@ -3,12 +3,12 @@ package fvarrui.makinito.hardware;
 import fvarrui.makinito.software.Datum;
 
 /**
- * Circuito combinacional de la ALU que lleva a cabo alguna operación.
+ * Circuito combinacional de la ALU que lleva a cabo alguna operaciÃ³n.
  * 
- * Toma los valores de sus dos entradas, realiza la operación corespondiente, y 
+ * Toma los valores de sus dos entradas, realiza la operaciÃ³n corespondiente, y 
  * coloca el resultado en la salida y actualiza el registro de estados (RE).
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public abstract class Operator extends Component {
 
@@ -62,7 +62,7 @@ public abstract class Operator extends Component {
 		int in1 = ((Datum)getIn1().getContent()).getValue();
 		int in2 = ((Datum)getIn2().getContent()).getValue();
 		
-		// se realiza la operación
+		// se realiza la operaciÃ³n
 		Integer res = handleOperate(in1, in2);
 		
 		// si el resultado es nulo, no se hace nada

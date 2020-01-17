@@ -5,17 +5,17 @@ import java.util.Map;
 /**
  * La unidad de control es la unidad funcional encargada de recuperar instrucciones de 
  * la memoria principal (cargarlas), decodificarlas, ejecutarlas y pasar a la siguiente
- * instrucción de forma cíclica, hasta que se active la señal de control TERM que detiene
- * la máquina. 
+ * instrucciÃ³n de forma cÃ­clica, hasta que se active la seÃ±al de control TERM que detiene
+ * la mÃ¡quina. 
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  *
  */
 public class ControlUnit extends FunctionalUnit {
 	private Sequencer sequencer;
 	private Decoder decoder;
 	
-	private Register instructionRegister;	// registro de instrucción
+	private Register instructionRegister;	// registro de instrucciÃ³n
 	private Register programCounter;		// contador de programa
 	
 	public ControlUnit(Makinito makinito) {

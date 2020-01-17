@@ -27,18 +27,18 @@ import fvarrui.makinito.software.parser.Parser;
 import fvarrui.makinito.software.parser.ParserException;
 
 /**
- * Máquina que simula la aquitectura Von Neumann, con los siguientes componentes
+ * MÃ¡quina que simula la aquitectura Von Neumann, con los siguientes componentes
  * interconectados mediante "cables" (Wire):
  * 
  * - CPU
  * 		- Unidad de control
- * 		- Unidad aritmético-lógica
+ * 		- Unidad aritmÃ©tico-lÃ³gica
  * - Memoria principal
  * - Bus de datos
  * - Bus de direcciones
  * - Reloj
  * 
- * @author Francisco Vargas 
+ * @author fvarrui 
  */
 public class Makinito extends FunctionalUnit {
 
@@ -141,7 +141,7 @@ public class Makinito extends FunctionalUnit {
 		addWire(new Wire("CDE2-BDI", cpu.getControlUnit().getInstructionRegister(), addressBus)); 
 		addWire(new Wire("RI-DEC", cpu.getControlUnit().getInstructionRegister(), cpu.getControlUnit().getDecoder().getDecoderInstructionRegister())); 
 
-		// cableado de la unidad aritmético-lógica
+		// cableado de la unidad aritmÃ©tico-lÃ³gica
 		addWire(new Wire("AC-BD", cpu.getALU().getAccumulator(), dataBus)); 
 		addWire(new Wire("BD-AC", dataBus, cpu.getALU().getAccumulator())); 
 		addWire(new Wire("RT-BD", cpu.getALU().getTemporaryRegister(), dataBus)); 
@@ -151,7 +151,7 @@ public class Makinito extends FunctionalUnit {
 
 	private void initControlSignals() {
 
-		// crea una señal de control por cada cable
+		// crea una seÃ±al de control por cada cable
 		for (Wire wire : wires.values()) {
 			if (wire.getName().matches("CDE[12]-.*"))
 				addSignal(new EAFControl(wire));
@@ -159,25 +159,25 @@ public class Makinito extends FunctionalUnit {
 				addSignal(new WireControl(wire));
 		}
 
-		// señales de control de la memoria
+		// seÃ±ales de control de la memoria
 		addSignal(new ReadControl(memory));
 		addSignal(new WriteControl(memory));
 
-		// señales de control de la UC
+		// seÃ±ales de control de la UC
 		addSignal(new IPCControl(cpu.getControlUnit().getProgramCounter()));
 
-		// señales de control de la UAL
+		// seÃ±ales de control de la UAL
 		for (Operator operator : cpu.getALU().getOperators()) {
 			addSignal(new ALUOpControl(operator));
 		}
 
-		// señales de control del decodificador
+		// seÃ±ales de control del decodificador
 		addSignal(new DecControl(cpu.getControlUnit().getDecoder()));
 
-		// señales de control de Makinito
+		// seÃ±ales de control de Makinito
 		addSignal(new TermControl(this));
 
-		// inicializa la UC con las posibles señales de control
+		// inicializa la UC con las posibles seÃ±ales de control
 		cpu.getControlUnit().init(signals);
 	}
 
@@ -242,10 +242,10 @@ public class Makinito extends FunctionalUnit {
 	
 	public void executeSignal() {
 		if (program == null) {
-			throw new MakinitoException("No hay ningún programa cargado en la memoria de Makinito.");
+			throw new MakinitoException("No hay ningÃºn programa cargado en la memoria de Makinito.");
 		}
 		if (isFinished()) {
-			throw new MakinitoException("El programa ha terminado su ejecución.");
+			throw new MakinitoException("El programa ha terminado su ejecuciÃ³n.");
 		}
 		clock.pulse();
 	}

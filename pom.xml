@@ -19,19 +19,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.2.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.xml.bind</groupId>
-			<artifactId>jaxb-impl</artifactId>
-			<version>2.2.5</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.activation</groupId>
-			<artifactId>activation</artifactId>
-			<version>1.1.1</version>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.3-b01</version>
 		</dependency>
 	</dependencies>
 
@@ -41,7 +31,7 @@
 			<plugin>
 				<groupId>fvarrui.maven</groupId>
 				<artifactId>javapackager</artifactId>
-				<version>0.8.0</version>
+				<version>0.8.8</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -55,9 +45,9 @@
 							<additionalResources>
 								<param>samples</param>
 							</additionalResources>
-							<organizationName>fvarrui</organizationName>
+							<organizationName>Francisco Vargas Ruiz</organizationName>
 							<organizationUrl>https://github.com/fvarrui</organizationUrl>
-							<url>https://github.com/fvarrui/Makinito</url>
+							<url>https://fvarrui.github.io/Makinito</url>
 						</configuration>
 					</execution>
 				</executions>

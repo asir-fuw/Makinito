@@ -4,10 +4,10 @@ import fvarrui.makinito.software.Datum;
 import fvarrui.makinito.software.Info;
 
 /**
- * Memoria principal (RAM) de la m醧uina. Contiene datos e instrucciones del programa
- * en ejecuci髇.
+ * Memoria principal (RAM) de la m锟絨uina. Contiene datos e instrucciones del programa
+ * en ejecuci贸n.
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public class Memory extends FunctionalUnit {
 	private Info[] content;
@@ -43,10 +43,10 @@ public class Memory extends FunctionalUnit {
 	public void read() {
 		Datum address = (Datum) addressRegister.getContent();
 		if (address.getValue() < 0 || address.getValue() >= content.length) {
-			throw new MakinitoException("Intento de acceso para lectura fuera del rango de memoria.\n- Direcci髇: " + address.getValue() + "\n- Rango de direcciones v醠ido: 0-" + (content.length - 1));
+			throw new MakinitoException("Intento de acceso para lectura fuera del rango de memoria.\n- Direcci贸n: " + address.getValue() + "\n- Rango de direcciones v谩lido: 0-" + (content.length - 1));
 		}
 		if (content[address.getValue()] == null) {
-			throw new MakinitoException("Intento de acceso para lectura en celda de memoria no asignada al programa.\n- Direcci髇: " + address.getValue());
+			throw new MakinitoException("Intento de acceso para lectura en celda de memoria no asignada al programa.\n- Direcci贸n: " + address.getValue());
 		}
 		memoryRegister.setContent(content[address.getValue()]);
 	}
@@ -54,10 +54,10 @@ public class Memory extends FunctionalUnit {
 	public void write() {
 		Datum address = (Datum) addressRegister.getContent();
 		if (address.getValue() < 0 || address.getValue() >= content.length) {
-			throw new MakinitoException("Intento de acceso para escritura fuera del rango de memoria.\n- Direcci髇: " + address.getValue() + "\n- Rango de direcciones v醠ido: 0-" + (content.length - 1));
+			throw new MakinitoException("Intento de acceso para escritura fuera del rango de memoria.\n- Direcci贸n: " + address.getValue() + "\n- Rango de direcciones v谩lido: 0-" + (content.length - 1));
 		}
 		if (content[address.getValue()] == null) {
-			throw new MakinitoException("Intento de acceso para escritura en celda de memoria no asignada al programa.\n- Direcci髇: " + address.getValue());
+			throw new MakinitoException("Intento de acceso para escritura en celda de memoria no asignada al programa.\n- Direcci贸n: " + address.getValue());
 		}
 		content[address.getValue()] = memoryRegister.getContent();
 	}

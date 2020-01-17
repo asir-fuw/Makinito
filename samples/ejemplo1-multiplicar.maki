@@ -4,15 +4,15 @@
 
 ; segmento de datos
 BEGIN-DATA
-		NUM=5			; número a multiplicar por 3  
+		NUM=5			; nÃºmero a multiplicar por 3  
 		RES=?			; donde se guarda el resultado
 END-DATA
 
-; segmento de código
+; segmento de cÃ³digo
 BEGIN-CODE
 		MOV [NUM],AC	; AC <- [NUM]
 BUCLE:	MOV 3,RT		; RT <- 3
 		MUL				; AC <- AC * RT
 		MOV AC,[RES]	; [RES] <- AC
-		TERM			; se detiene la máquina
+		TERM			; se detiene la mÃ¡quina
 END-CODE

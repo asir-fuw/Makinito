@@ -1,15 +1,15 @@
 package fvarrui.makinito.hardware;
 
 /**
- * Las señales de control las activa el secuenciador en el orden adecuado para 
+ * Las seÃ±ales de control las activa el secuenciador en el orden adecuado para 
  * cumplir su cometido (ejecutar las instrucciones del programa cargado en memoria).
  * 
- * Las señales de control actúan sobre un componente, provocando que éste realice
- * alguna acción. Por ejemplo, la señal de lectura (LECT) actúa sobre la memoria 
- * principal para que ésta lea el contenido la dirección del registro RD y lo 
+ * Las seÃ±ales de control actÃºan sobre un componente, provocando que Ã©ste realice
+ * alguna acciÃ³n. Por ejemplo, la seÃ±al de lectura (LECT) actÃºa sobre la memoria 
+ * principal para que Ã©sta lea el contenido la direcciÃ³n del registro RD y lo 
  * copie en el registro RM.   
  *  
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public abstract class ControlSignal {
 	private String name;
@@ -60,7 +60,7 @@ public abstract class ControlSignal {
 	
 	@Override
 	public String toString() {
-		return name; // "Señal de control " + name + " actúa sobre " + component.getName();
+		return name; // "SeÃ±al de control " + name + " actÃºa sobre " + component.getName();
 	}
 
 }

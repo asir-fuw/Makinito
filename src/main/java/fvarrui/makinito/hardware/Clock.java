@@ -1,10 +1,10 @@
 package fvarrui.makinito.hardware;
 
 /**
- * Reloj del sistema: encargado de marcar los tiempos del secuenciador para que éste lance 
- * de forma ordenada en cada pulso la señal de control adecuada.
+ * Reloj del sistema: encargado de marcar los tiempos del secuenciador para que Ã©ste lance 
+ * de forma ordenada en cada pulso la seÃ±al de control adecuada.
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  *
  */
 public class Clock extends Component {

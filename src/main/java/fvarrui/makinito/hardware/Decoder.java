@@ -17,18 +17,18 @@ import fvarrui.makinito.software.Instruction;
 import fvarrui.makinito.software.Operand;
 
 /**
- * El decodificador se encarga de, a partir de la instrucci髇 almacenada en el registro de instrucci髇 (RI)
- * y de los flags del Registro de Estados, determinar el conjunto de se馻les de control adecuadas para 
- * ejecutar la instrucci髇.
+ * El decodificador se encarga de, a partir de la instrucci贸n almacenada en el registro de instrucci贸n (RI)
+ * y de los flags del Registro de Estados, determinar el conjunto de se帽ales de control adecuadas para 
+ * ejecutar la instrucci贸n.
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public class Decoder extends Component {
 	
 	private static final String INSTRUCTION_SET_FILE = "/microcode/microcode.xml";
 
 	private FlagRegister flagsRegister;						// registro de estado
-	private Register decoderInstructionRegister;			// registro de instrucci髇 del decodificador
+	private Register decoderInstructionRegister;			// registro de instrucci贸n del decodificador
 	private Sequencer sequencer;
 	private Map<String, ControlSignal> allSignals;
 	private Makinito makinito;

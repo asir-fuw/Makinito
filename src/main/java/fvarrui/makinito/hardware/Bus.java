@@ -1,11 +1,11 @@
 package fvarrui.makinito.hardware;
 
 /**
- * Bus: vía de conexión entre los distintos componentes de la aquitectura. Podemos considerarlo
- * como un registro intermedio empleado para intercambiar información entre los componentes
+ * Bus: vÃ­a de conexiÃ³n entre los distintos componentes de la aquitectura. Podemos considerarlo
+ * como un registro intermedio empleado para intercambiar informaciÃ³n entre los componentes
  * que interconecta.
  *  
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public class Bus extends Register {
 

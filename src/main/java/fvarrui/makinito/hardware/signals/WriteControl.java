@@ -6,7 +6,7 @@ import fvarrui.makinito.hardware.Memory;
 public class WriteControl extends ControlSignal {
 	
 	public WriteControl(Memory memory) {
-		super("ESCR", memory, "Almacena en la dirección memoria contenida en RD el contenido del registro RM");
+		super("ESCR", memory, "Almacena en la direcciÃ³n memoria contenida en RD el contenido del registro RM");
 	}
 
 	@Override

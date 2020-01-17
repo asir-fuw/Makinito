@@ -9,9 +9,9 @@ public class EAFControl extends WireControl {
 	public EAFControl(Wire wire) {
 		super(wire);
 		if (getName().matches("CDE1-.*"))
-			setDescription("Mover información desde CDE1 de la instrucción en RI hasta '" + wire.getTarget().getName() + "'");
+			setDescription("Mover informaciÃ³n desde CDE1 de la instrucciï¿½n en RI hasta '" + wire.getTarget().getName() + "'");
 		else
-			setDescription("Mover información desde CDE2 de la instrucción en RI hasta '" + wire.getTarget().getName() + "'");
+			setDescription("Mover informaciÃ³n desde CDE2 de la instrucciï¿½n en RI hasta '" + wire.getTarget().getName() + "'");
 	}
 	
 	@Override

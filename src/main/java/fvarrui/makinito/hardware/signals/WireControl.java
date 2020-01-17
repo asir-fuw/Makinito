@@ -9,7 +9,7 @@ public class WireControl extends ControlSignal {
 		super();
 		setName(wire.getName());
 		setComponent(wire);
-		setDescription("Mover información desde '" + wire.getSource().getName() + "' hasta '" + wire.getTarget().getName() + "'");
+		setDescription("Mover informaciÃ³n desde '" + wire.getSource().getName() + "' hasta '" + wire.getTarget().getName() + "'");
 	}
 	
 	public void handleActivate() {

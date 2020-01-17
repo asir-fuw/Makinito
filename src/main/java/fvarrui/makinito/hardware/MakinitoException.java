@@ -1,13 +1,13 @@
 package fvarrui.makinito.hardware;
 
 /**
- * Excepción geneal que lanza Makinito en caso de producirse cualquier error y no poder continuar
- * su ejecución, durante su inicialización o durante la carga de un programa. 
+ * ExcepciÃ³n geneal que lanza Makinito en caso de producirse cualquier error y no poder continuar
+ * su ejecuciÃ³n, durante su inicializaciÃ³n o durante la carga de un programa. 
  * 
- * Contiene un mensaje que describe el error ocurrido, así como en algunos casos
- * la exepción original producida.
+ * Contiene un mensaje que describe el error ocurrido, asï¿½ como en algunos casos
+ * la exepciÃ³n original producida.
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  *
  */
 @SuppressWarnings("serial")

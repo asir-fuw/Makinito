@@ -78,17 +78,17 @@ public class Parser {
 					op.setEffectiveAddressField(new Datum(makinito.encodeRegister(operand)));
 					op.setRegisterName(operand);
 				} 
-				// número decimal
+				// nÃºmero decimal
 				else if (operand.matches(DECIMAL)) {			
 					op.setAddressingMode(AddressingMode.IMMEDIATE);
 					op.setEffectiveAddressField(new Datum(Integer.parseInt(operand)));
 				} 
-				// número binario
+				// nÃºmero binario
 				else if (operand.matches(BINARY)) {			
 					op.setAddressingMode(AddressingMode.IMMEDIATE);
 					op.setEffectiveAddressField(new Datum(ParseUtils.binaryToInteger(operand.substring(0, operand.length() - 1))));
 				} 
-				// número hexadecimal
+				// nÃºmero hexadecimal
 				else if (operand.matches(HEXADECIMAL)) {		
 					op.setAddressingMode(AddressingMode.IMMEDIATE);
 					op.setEffectiveAddressField(new Datum(ParseUtils.hexToInteger(operand.substring(0, operand.length() - 1))));
@@ -97,49 +97,49 @@ public class Parser {
 				else if (operand.matches(ID)) {		
 					op.setAddressingMode(AddressingMode.IMMEDIATE);
 					if (labels.get(operand) == null) {
-						throw new ParserException(lineNumber, "Operando no válido: el identificador '" + operand + "' no existe.");
+						throw new ParserException(lineNumber, "Operando no vÃ¡lido: el identificador '" + operand + "' no existe.");
 					}
 					op.setEffectiveAddressField(new Datum(labels.get(operand)));
 				} 
-				// dirección de memoria
+				// direcciÃ³n de memoria
 				else if (operand.matches(DIRECT_WITH_VALUE)) {				
 					operand = operand.substring(1, operand.length() - 1);
 					op.setAddressingMode(AddressingMode.DIRECT);
 					op.setEffectiveAddressField(new Datum(Integer.parseInt(operand)));
 				}
-				// dirección de memoria
+				// direcciÃ³n de memoria
 				else if (operand.matches(DIRECT_WITH_ID)) {		
 					operand = operand.substring(1, operand.length() - 1);
 					if (isRegister(operand)) {
-						throw new ParserException(lineNumber, "Operando no válido: modo de direccionamiento no válido. No se puede usar un registro en el modo de direccionamiento directo '[" + operand + "]'.");
+						throw new ParserException(lineNumber, "Operando no vÃ¡lido: modo de direccionamiento no vÃ¡lido. No se puede usar un registro en el modo de direccionamiento directo '[" + operand + "]'.");
 					}
 					op.setAddressingMode(AddressingMode.DIRECT);
 					if (labels.get(operand) == null) {
-						throw new ParserException(lineNumber, "Operando no válido: el identificador '" + operand + "' no existe.");
+						throw new ParserException(lineNumber, "Operando no vÃ¡lido: el identificador '" + operand + "' no existe.");
 					}
 					op.setEffectiveAddressField(new Datum(labels.get(operand)));
 				}
-				// dirección de memoria de la dirección de memoria
+				// direcciï¿½n de memoria de la direcciÃ³n de memoria
 				else if (operand.matches(INDIRECT_WITH_VALUE)) {	
 					operand = operand.substring(2, operand.length() - 2);
 					op.setAddressingMode(AddressingMode.INDIRECT);
 					op.setEffectiveAddressField(new Datum(Integer.parseInt(operand)));
 				}
-				// dirección de memoria de la dirección de memoria
+				// direcciï¿½n de memoria de la direcciÃ³n de memoria
 				else if (operand.matches(INDIRECT_WITH_ID)) {	
 					operand = operand.substring(2, operand.length() - 2);
 					if (isRegister(operand)) {
-						throw new ParserException(lineNumber, "Operando no válido: modo de direccionamiento no válido. No se puede usar un registro en el modo de direccionamiento directo '[" + operand + "]'.");
+						throw new ParserException(lineNumber, "Operando no vÃ¡lido: modo de direccionamiento no vÃ¡lido. No se puede usar un registro en el modo de direccionamiento directo '[" + operand + "]'.");
 					}
 					op.setAddressingMode(AddressingMode.INDIRECT);
 					if (labels.get(operand) == null) {
-						throw new ParserException(lineNumber, "Operando no válido; el identificador '" + operand + "' no existe.");
+						throw new ParserException(lineNumber, "Operando no vÃ¡lido; el identificador '" + operand + "' no existe.");
 					}
 					op.setEffectiveAddressField(new Datum(labels.get(operand)));
 				}
 				// desconocido
 				else {
-					throw new ParserException(lineNumber, "Operando no válido en el bloque de datos: " + operand);
+					throw new ParserException(lineNumber, "Operando no vÃ¡lido en el bloque de datos: " + operand);
 				}
 				operands.add(op);
 			}
@@ -155,7 +155,7 @@ public class Parser {
 	private Instruction parseInstruction(String line, Map<String, Integer> labels, boolean first) throws ParserException {
 		line = line.trim().toUpperCase();
 		
-		line = line.replaceAll("[!;]*\\h*,\\h*", ",");	// quita cualquier espacio antes o después de las comas fuera de los comentarios 
+		line = line.replaceAll("[!;]*\\h*,\\h*", ",");	// quita cualquier espacio antes o despuÃ©s de las comas fuera de los comentarios 
 
 		String parts[] = line.split("\\h+");
 
@@ -165,7 +165,7 @@ public class Parser {
 		// hay etiqueta
 		if (line.matches("^" + ID + ":" + SPACE + "$")) {
 			String etiqueta = parts[0];
-			throw new ParserException(lineNumber, "Se encontró la etiqueta '" + etiqueta + "' suelta, sin instrucción.");
+			throw new ParserException(lineNumber, "Se encontrÃ³ la etiqueta '" + etiqueta + "' suelta, sin instrucciÃ³n.");
 		} else if (line.matches("^" + ID + ":.*")) {
 			mnemonic = parts[1];
 			operands = parts.length > 2 ? parts[2] : null;
@@ -238,7 +238,7 @@ public class Parser {
 				
 				line = line.toUpperCase();
 				
-				// ignora líneas vacías y comentarios
+				// ignora lï¿½neas vacï¿½as y comentarios
 				if (line.trim().isEmpty() || line.matches(COMMENT)) {
 					// lo ignoramos
 				}
@@ -247,14 +247,14 @@ public class Parser {
 					log("Entrando en bloque de CODIGO");
 					status = CODE_IN;
 				} 
-				// sale del bloque de código
+				// sale del bloque de cï¿½digo
 				else if (line.matches(END_CODE) && status == CODE_IN) {
 					log("Saliendo de bloque de CODIGO");
 					status = CODE_OUT;
 				}
 				// encuentra END_CODE sin BEGIN_CODE
 				else if (line.matches(END_CODE) && status != CODE_IN) {
-					throw new ParserException(lineNumber, "Se ha encontrado final de bloque de código (END-CODE) sin abrir previamente (BEGIN-CODE)");
+					throw new ParserException(lineNumber, "Se ha encontrado final de bloque de cÃ³digo (END-CODE) sin abrir previamente (BEGIN-CODE)");
 				}
 				// entra en el bloque de datos 
 				else if (line.matches(BEGIN_DATA) && (status == OUT || status == CODE_OUT)) {
@@ -294,7 +294,7 @@ public class Parser {
 					}
 					
 				}
-				// encuentra instruccion (sólo procesa las instrucciones en la segunda pasada)
+				// encuentra instruccion (sï¿½lo procesa las instrucciones en la segunda pasada)
 				else if (status == CODE_IN) {
 					
 					if (line.matches(INSTRUCTION)) {
@@ -302,33 +302,33 @@ public class Parser {
 						Instruction instruction = parseInstruction(line, labels, first);
 						if (!first) {
 							if (!makinito.getCPU().getControlUnit().getDecoder().isValidInstruction(instruction)) {
-								throw new ParserException(lineNumber, "Instrucción no válida: " + instruction 
-										+ "\n\nRevisa el nombre de la instrucción y si el número de operandos y/o los modos de direccionamiento"
-										+ " son válidos para esta instrucción.");
+								throw new ParserException(lineNumber, "InstrucciÃ³n no vÃ¡lida: " + instruction 
+										+ "\n\nRevisa el nombre de la instrucciÃ³n y si el nÃºmero de operandos y/o los modos de direccionamiento"
+										+ " son vÃ¡lidos para esta instrucciÃ³n.");
 							}
 							program.getInstructions().add(instruction);
 						}
 						memoryAddress++;
 						
 					} else {
-						throw new ParserException(lineNumber, "Se ha encontrado algo raro en el bloque de código:\n\n" + line);
+						throw new ParserException(lineNumber, "Se ha encontrado algo raro en el bloque de cÃ³digo:\n\n" + line);
 					}
 					
 				} else {
-					throw new ParserException(lineNumber, "Se ha encontrado algo raro por fuera de los bloques de datos y de código:\n\n" + line);
+					throw new ParserException(lineNumber, "Se ha encontrado algo raro por fuera de los bloques de datos y de cÃ³digo:\n\n" + line);
 				}
 	
 				lineNumber++;
 			}
 			
 			if (status == CODE_IN) {
-				throw new ParserException(lineNumber, "No se ha cerrado el bloque de código (falta " + END_CODE + ")");
+				throw new ParserException(lineNumber, "No se ha cerrado el bloque de cÃ³digo (falta " + END_CODE + ")");
 			}
 			else if (status == DATA_IN) {
 				throw new ParserException(lineNumber, "No se ha cerrado el bloque de datos (falta " + END_DATA + ")");
 			}
 			
-			// añade al final del programa la instrucción TERMINAR en la segunda pasada
+			// aï¿½ade al final del programa la instrucciï¿½n TERMINAR en la segunda pasada
 			if (!first && (program.getInstructions().isEmpty() || !(program.getInstructions().get(program.getInstructions().size() - 1)).getOpCode().equals("TERMINAR"))) {
 				program.getInstructions().add(new Instruction("TERMINAR"));
 			}

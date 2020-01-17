@@ -1,9 +1,9 @@
 package fvarrui.makinito.hardware;
 
 /**
- * Unidad funcional de la m·quina
+ * Unidad funcional de la m√°quina
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public abstract class FunctionalUnit extends Container {
 	

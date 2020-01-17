@@ -14,7 +14,7 @@ public class DivisionOperator extends Operator {
 		try {
 			return in1 / in2;
 		} catch (ArithmeticException e) {
-			throw new MakinitoException("Error en el operador de división: " + e.getMessage(), e);
+			throw new MakinitoException("Error en el operador de divisiÃ³n: " + e.getMessage(), e);
 		}
 	}
 

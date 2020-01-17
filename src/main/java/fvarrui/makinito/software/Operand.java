@@ -3,8 +3,8 @@ package fvarrui.makinito.software;
 public class Operand {
 	
 	private AddressingMode addressingMode; 		// modo de direccionamiento
-	private Datum effectiveAddressField; 		// campo de dirección efectiva
-	private String registerName;				// información extra
+	private Datum effectiveAddressField; 		// campo de direcciÃ³n efectiva
+	private String registerName;				// informaciÃ³n extra
 	
 	public Operand() {}
 	

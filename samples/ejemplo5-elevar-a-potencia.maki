@@ -4,13 +4,13 @@
 
 ; segmento de datos
 BEGIN-DATA
-		NUM=10		; número a elevar
+		NUM=10		; nÃºmero a elevar
 		POTENCIA=3	; potencia
 		CONTADOR=?	; contador
 		RES=?		; donde se guarda el resultado
 END-DATA
 
-; segmento de código
+; segmento de cÃ³digo
 BEGIN-CODE
 		MOV [NUM],[RES]
 		MOV [POTENCIA],[CONTADOR]
@@ -21,5 +21,5 @@ BUCLE:	SUB [CONTADOR],1
 		MUL [RES],[NUM]
 		MOV AC,[RES]
 		JMP BUCLE
-FIN:	TERM		; se detiene la máquina
+FIN:	TERM		; se detiene la mÃ¡quina
 END-CODE

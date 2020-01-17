@@ -5,11 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Unidad aritmético-lógica. Contiene operadores (circuitos combinacionales para +,-,*,/,=), así como 
- * dos registros de propósito general (AC , RT) y un registro de estados (RE), con flags de la última
- * operación realizada.
+ * Unidad aritmÃ©tico-lÃ³gica. Contiene operadores (circuitos combinacionales para +,-,*,/,=), asÃ­ como 
+ * dos registros de propÃ³sito general (AC , RT) y un registro de estados (RE), con flags de la Ãºltima
+ * operaciÃ³n realizada.
  *  
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public class ALU extends FunctionalUnit {
 

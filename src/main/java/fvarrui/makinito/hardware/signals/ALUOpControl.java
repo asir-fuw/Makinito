@@ -6,7 +6,7 @@ import fvarrui.makinito.hardware.Operator;
 public class ALUOpControl extends ControlSignal {
 	
 	public ALUOpControl(Operator operator) {
-		super("UAL-OP(" + operator.getName() + ")", operator, "Realiza la operación AC " + operator.getName() + " RT, guarda el resultado en AC y actualiza RE");
+		super("UAL-OP(" + operator.getName() + ")", operator, "Realiza la operaciÃ³n AC " + operator.getName() + " RT, guarda el resultado en AC y actualiza RE");
 	}
 
 	@Override

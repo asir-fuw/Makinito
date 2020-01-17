@@ -5,8 +5,8 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * Permite recuperar los mensajes o textos mostrados por la aplicación. Gracias a esta clase
- * se consigue la internacionalización de la aplicación. 
+ * Permite recuperar los mensajes o textos mostrados por la aplicaciÃ³n. Gracias a esta clase
+ * se consigue la internacionalizaciÃ³n de la aplicaciÃ³n. 
  * 
  * @author Francisco Vargas
  *

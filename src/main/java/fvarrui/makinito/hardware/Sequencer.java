@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * El secuenciador es el encargado de activar las señales de control en el orden adecuado
- * para ejecutar las instrucciones, así como cargarlas y decodificarlas. 
+ * El secuenciador es el encargado de activar las seÃ±ales de control en el orden adecuado
+ * para ejecutar las instrucciones, asÃ­ como cargarlas y decodificarlas. 
  * 
- * Funciona de forma síncrona marcado por el reloj del sistema.   
+ * Funciona de forma sÃ­ncrona marcado por el reloj del sistema.   
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  *
  */
 public class Sequencer extends Component {

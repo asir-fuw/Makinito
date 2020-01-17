@@ -3,9 +3,9 @@ package fvarrui.makinito.hardware;
 import fvarrui.makinito.software.Info;
 
 /**
- * Cable o vía que interconecta dos componentes.
+ * Cable o vÃ­a que interconecta dos componentes.
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public class Wire extends Component {
 

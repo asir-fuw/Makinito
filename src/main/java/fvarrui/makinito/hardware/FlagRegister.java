@@ -3,7 +3,7 @@ package fvarrui.makinito.hardware;
 import fvarrui.makinito.software.Datum;
 
 /**
- * Registro de estado. Contiene información sobre la última operación realizada en la UAL. 
+ * Registro de estado. Contiene informaciÃ³n sobre la ï¿½ltima operaciÃ³n realizada en la UAL. 
  * 
  * @author Francisco Vargas
  */

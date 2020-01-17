@@ -4,11 +4,11 @@
 
 ; segmento de datos
 BEGIN-DATA
-		NUM=10		; número a calcular el factorial  
+		NUM=10		; nÃºmero a calcular el factorial  
 		FACT=?		; donde se guarda el resultado
 END-DATA
 
-; segmento de código
+; segmento de cÃ³digo
 BEGIN-CODE
 		MOV 1,[FACT]
 BUCLE:	MUL [FACT],[NUM]
@@ -17,5 +17,5 @@ BUCLE:	MUL [FACT],[NUM]
 		MOV AC,[NUM]
 		CMP [NUM],1
 		JGT BUCLE		
-		TERM			; se detiene la máquina
+		TERM			; se detiene la mÃ¡quina
 END-CODE

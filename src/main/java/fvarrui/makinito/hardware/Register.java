@@ -5,9 +5,9 @@ import fvarrui.makinito.software.Info;
 import fvarrui.makinito.software.Instruction;
 
 /**
- * Pequeña memoria o almacén de datos, que puede contener datos, direcciones o instrucciones.  
+ * PequeÃ±a memoria o almacÃ©n de datos, que puede contener datos, direcciones o instrucciones.  
  * 
- * @author Francisco Vargas
+ * @author fvarrui
  */
 public class Register extends Component {
 	private Info content;

@@ -43,7 +43,7 @@ public class ControlUnitPanel extends JPanel {
 		signalsList.setEnabled(false);
 		
 		JLabel instructionRegisterLabel = new JLabel("RI");
-		instructionRegisterLabel.setToolTipText("Registro de Instrucción");
+		instructionRegisterLabel.setToolTipText("Registro de Instrucciï¿½n");
 
 		JLabel programCounterLabel = new JLabel("CP");
 		programCounterLabel.setToolTipText("Contador de Programa");
@@ -85,8 +85,8 @@ public class ControlUnitPanel extends JPanel {
 	public void setPhase(Phase phase) {
 		switch (phase) {
 		case DECODE:	phaseText.setText("DECODIFICACION"); break;
-		case EXECUTE:			phaseText.setText("EJECUCION"); break;
-		case FETCH:			phaseText.setText("CARGA"); break;
+		case EXECUTE:	phaseText.setText("EJECUCION"); break;
+		case FETCH:		phaseText.setText("CARGA"); break;
 		}
 	}
 

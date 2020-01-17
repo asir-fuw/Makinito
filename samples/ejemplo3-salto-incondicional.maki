@@ -9,11 +9,11 @@ BEGIN-DATA
 		RES=?		; donde se guarda el resultado
 END-DATA
 
-; segmento de cÛdigo
+; segmento de c√≥digo
 BEGIN-CODE
 		MUL [NUM1],[NUM2]
 		MOV AC,[RES]
 		JMP AQUI
 		MOV 12345,[RES]
-AQUI:	TERM			; se detiene la m·quina
+AQUI:	TERM			; se detiene la m√°quina
 END-CODE

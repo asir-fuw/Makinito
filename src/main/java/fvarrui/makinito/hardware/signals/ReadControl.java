@@ -6,7 +6,7 @@ import fvarrui.makinito.hardware.Memory;
 public class ReadControl extends ControlSignal {
 	
 	public ReadControl(Memory memory) {
-		super("LECT", memory, "Recupera la información (dato o instrucción) que hay en la dirección contenida en RD y lo almacena en RM");
+		super("LECT", memory, "Recupera la informaciÃ³n (dato o instrucciÃ³n) que hay en la direcciÃ³n contenida en RD y lo almacena en RM");
 	}
 	
 	@Override
