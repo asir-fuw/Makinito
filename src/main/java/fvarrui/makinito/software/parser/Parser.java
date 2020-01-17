@@ -238,16 +238,16 @@ public class Parser {
 				
 				line = line.toUpperCase();
 				
-				// ignora l�neas vac�as y comentarios
+				// ignora líneas vacías y comentarios
 				if (line.trim().isEmpty() || line.matches(COMMENT)) {
 					// lo ignoramos
 				}
-				// entra en el bloque de codigo 
+				// entra en el bloque de código 
 				else if (line.matches(BEGIN_CODE) && (status == OUT || status == DATA_OUT)) {
 					log("Entrando en bloque de CODIGO");
 					status = CODE_IN;
 				} 
-				// sale del bloque de c�digo
+				// sale del bloque de código
 				else if (line.matches(END_CODE) && status == CODE_IN) {
 					log("Saliendo de bloque de CODIGO");
 					status = CODE_OUT;
@@ -294,7 +294,7 @@ public class Parser {
 					}
 					
 				}
-				// encuentra instruccion (s�lo procesa las instrucciones en la segunda pasada)
+				// encuentra instruccion (sólo procesa las instrucciones en la segunda pasada)
 				else if (status == CODE_IN) {
 					
 					if (line.matches(INSTRUCTION)) {
@@ -328,9 +328,9 @@ public class Parser {
 				throw new ParserException(lineNumber, "No se ha cerrado el bloque de datos (falta " + END_DATA + ")");
 			}
 			
-			// a�ade al final del programa la instrucci�n TERMINAR en la segunda pasada
-			if (!first && (program.getInstructions().isEmpty() || !(program.getInstructions().get(program.getInstructions().size() - 1)).getOpCode().equals("TERMINAR"))) {
-				program.getInstructions().add(new Instruction("TERMINAR"));
+			// añade al final del programa la instrucción TERMINAR en la segunda pasada
+			if (!first && (program.getInstructions().isEmpty() || !(program.getInstructions().get(program.getInstructions().size() - 1)).getOpCode().equals("TERM"))) {
+				program.getInstructions().add(new Instruction("TERM"));
 			}
 			
 		} finally {
