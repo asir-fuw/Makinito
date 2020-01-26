@@ -12,7 +12,7 @@
 	<description>Von Neumann architecture simulator</description>
 
 	<properties>
-		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.target>8</maven.compiler.target>		
 		<maven.compiler.source>8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -21,17 +21,16 @@
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
-			<version>2.3.3-b01</version>
+			<version>2.4.0-b180830.0438</version>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<!-- build native app and installer -->
 			<plugin>
 				<groupId>fvarrui.maven</groupId>
 				<artifactId>javapackager</artifactId>
-				<version>0.8.8</version>
+				<version>0.8.9</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
