@@ -4,4 +4,4 @@ Makinito simula el comportamiento de una máquina con arquitectura Von Neumann �
 
 ![Interfaz de usuario del simulador](docs/images/interfaz.png)
 
-Ir a la [documentación](https://fvarrui.github.io/Makinito).
+Ir a la [documentación](https://asir-fuw.github.io/Makinito).
