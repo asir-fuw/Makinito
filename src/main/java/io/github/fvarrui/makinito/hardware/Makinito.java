@@ -181,14 +181,15 @@ public class Makinito extends FunctionalUnit {
 		cpu.getControlUnit().init(signals);
 	}
 
-	public void loadProgram(Program program) {
+	public Program loadProgram(Program program) {
 		this.memory.clear();
 		this.program = program;
 		reset();
+		return this.program;
 	}
 	
-	public void loadProgram(File file) throws IOException, ParserException {
-		loadProgram(new Parser(this).parse(file));
+	public Program loadProgram(File file) throws IOException, ParserException {
+		return loadProgram(new Parser(this).parse(file));
 	}
 	
 	public Program getProgram() {

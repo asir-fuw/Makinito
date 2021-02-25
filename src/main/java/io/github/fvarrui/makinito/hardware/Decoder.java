@@ -122,7 +122,7 @@ public class Decoder extends Component {
 		return (searchMicroProgram(instruction) != null);
 	}
 	
-	private List<ControlSignal> decode(Instruction instruction) {
+	public List<ControlSignal> decode(Instruction instruction) {
 		List<ControlSignal> controlSignals = new ArrayList<ControlSignal>();
 		
 		MicroProgram mp = searchMicroProgram(instruction);
@@ -138,8 +138,6 @@ public class Decoder extends Component {
 		} else {
 			controlSignals.add(allSignals.get("ICP"));
 		}
-		
-		System.out.println(controlSignals);
 		
 		return optimize(controlSignals);
 	}

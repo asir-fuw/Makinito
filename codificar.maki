@@ -1,0 +1,41 @@
+; =============
+; RES = NUM * 3
+; =============
+
+; segmento de datos
+BEGIN-DATA
+		NUM=5		; número a multiplicar por 3  
+		RES=?		; donde se guarda el resultado
+END-DATA
+
+; segmento de código
+BEGIN-CODE
+		MUL
+		MUL AC
+		MUL 25
+		MUL [25]
+		MUL [[25]]
+		MUL AC, 5
+		MUL RT, [8]
+		MUL [6], AC
+		MUL RT, [[6]]
+		DIV
+		DIV RT
+		DIV 13
+		DIV [9]
+		DIV [[4]]
+		DIV [5], RT
+		DIV RT, [3]
+		DIV AC, [[12]]
+		DIV RT, [7]		
+		ADD
+		ADD AC,RT
+		SUB
+		SUB RT,AC
+		MOV 5, RT
+		MOV [7], AC
+		MOV AC,[RES]
+		JMP 8
+		JMP [6]
+		JMP AC
+END-CODE
