@@ -176,16 +176,22 @@ El MD indica cómo recuperar el dato, y el significado del CDE dependerá del MD
 
 ### Códigos de operación
 
-| CO   | Valor | Binario |
-| ---- | ----- | ------- |
-| MOV  | 0     | 0000    |
-| ADD  | 1     | 0001    |
-| SUB  | 2     | 0010    |
-| MUL  | 3     | 0011    |
-| DIV  | 4     | 0100    |
-| CMP  | 5     | 0101    |
-| JMP  | 6     | 0110    |
-| ...  | ...   | ...     |
+| CO    | Valor | Binario |
+| ----- | ----- | ------- |
+| MOV   | 0     | 0000    |
+| ADD   | 1     | 0001    |
+| SUB   | 2     | 0010    |
+| MUL   | 3     | 0011    |
+| DIV   | 4     | 0100    |
+| CMP   | 5     | 0101    |
+| JMP   | 6     | 0110    |
+| JE    | 7     | 0111    |
+| JLE   | 8     | 1000    |
+| JGE   | 9     | 1001    |
+| JLT   | 10    | 1010    |
+| JGT   | 11    | 1011    |
+| JNE   | 12    | 1100    |
+| TERM  | 13    | 1101    |
 
 ### Codificación de los modos de direccionamiento
 
