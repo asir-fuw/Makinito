@@ -27,12 +27,12 @@ Makinito cuenta con las siguientes instrucciones:
 | `DIV [x[,y]]` | Divide los valores **x** e **y** y guarda el resultado en **AC** |
 | `CMP [x[,y]]` | Compara los valores **x** e **y** y modifica el registro de estados |
 | `JMP d`       | Salta a la dirección de memoria **d**                        |
-| `JE d`        | Salta a la dirección de memoria **d **si **x** es igual a **y** |
-| `JLE d`       | Salta a la dirección de memoria **d **si **x** es menor o igual a **y** |
-| `JGE d`       | Salta a la dirección de memoria **d **si **x** es mayor o igual a **y** |
-| `JLT d`       | Salta a la dirección de memoria **d **si **x** es menor que **y** |
-| `JGT d`       | Salta a la dirección de memoria **d **si **x** es mayor que **y** |
-| `JNE d`       | Salta a la dirección de memoria **d **si **x** es distinto de **y** |
+| `JE d`        | Salta a la dirección de memoria **d** si **x** es igual a **y** |
+| `JLE d`       | Salta a la dirección de memoria **d** si **x** es menor o igual a **y** |
+| `JGE d`       | Salta a la dirección de memoria **d** si **x** es mayor o igual a **y** |
+| `JLT d`       | Salta a la dirección de memoria **d** si **x** es menor que **y** |
+| `JGT d`       | Salta a la dirección de memoria **d** si **x** es mayor que **y** |
+| `JNE d`       | Salta a la dirección de memoria **d** si **x** es distinto de **y** |
 | `TERM`        | Detiene la máquina                                           |
 
 > `x` e `y` pueden ser valores inmediatos, directos, indirectos o regisrtros (ver [modos de direccionamiento](#Modos-de-direccionamiento))
@@ -118,7 +118,7 @@ Los comentarios son todas aquellas líneas que comienzan en `;` (punto y coma):
 También es posible escribir comentarios al final de un línea:
 
 ```asm
-    MOVER 1,[FACT]    ; esto es otro comentario
+    MOV 1,[FACT]    ; esto es otro comentario
 ```
 
 Los comentarios son ignorados cuando el programa es cargado en Makinito.
