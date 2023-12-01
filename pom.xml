@@ -1,12 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.github.fvarrui</groupId>
 	<artifactId>Makinito</artifactId>
-	<version>0.7.0</version>
+	<version>0.7.1</version>
 
 	<name>Makinito</name>
 	<description>Von Neumann architecture simulator</description>
@@ -16,6 +16,11 @@
 		<maven.compiler.source>8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<organization>
+		<name>Francisco Vargas Ruiz (fvarrui)</name>
+		<url>https://github.com/fvarrui</url>
+	</organization>
 
 	<dependencies>
 		<dependency>
@@ -31,11 +36,27 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>config/config.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>config/config.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
-				<groupId>fvarrui.maven</groupId>
+				<groupId>io.github.fvarrui</groupId>
 				<artifactId>javapackager</artifactId>
-				<version>1.5.1</version>
+				<version>1.7.5</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -46,11 +67,10 @@
 							<mainClass>io.github.fvarrui.makinito.Main</mainClass>
 							<bundleJre>true</bundleJre>
 							<generateInstaller>true</generateInstaller>
+							<customizedJre>false</customizedJre>
 							<additionalResources>
-								<param>samples</param>
+								<additionalResource>samples</additionalResource>
 							</additionalResources>
-							<organizationName>Francisco Vargas Ruiz</organizationName>
-							<organizationUrl>https://github.com/fvarrui</organizationUrl>
 							<url>https://asir-fuw.github.io/Makinito</url>
 						</configuration>
 					</execution>
